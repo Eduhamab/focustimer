@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-black: hsl(240,6%,21%,1);
+  --color-blue: hsl(194,97%,31%,1);
+  --color-bg-ambientes: hsl( 240,9%,89%,1);
+
+
+  font-size: clamp(40%, 1% + 1vw, 62.5%);
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 12.6rem;
+    color: var(--color-black);
+
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+
+}
+
+button{
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--color-black);
+
+  font-size: 5rem;
+}
+
+#ambientes button{
+  background-color: var(--color-bg-ambientes);
+  padding: 4.8rem;
+  border-radius: 2.4rem;
+}
+
+/*#ambientes button:hover{
+  background-color:hsl(240, 12%, 92%);
+  transition: .3s;
+}*/
+
+.flex{
+  display: flex;
+}
+
+#controls{
+  margin-top: 3rem;
+  gap: 4rem;
+}
+
+
+#app{
+  margin-top: -15rem;
+  gap: 19rem;
+  align-items: center;
+}
+
+#ambientes{
+  display: grid;
+  grid-template-areas:
+  "a b"
+  "c d"
+  ;
+
+  gap: 3.2rem;
+}
+
+#ambientes button.activeSound{
+  background-color: var(--color-blue);
+}
+
+#ambientes  button path.activeSound{
+  fill: white;
+}
+
+
+#ambientes button:hover{
+  scale: calc(1.1);
+  transition: 0.8s;
+}
+
+/*Controls*/
+
+.running .ph-play-circle, 
+html:not(.running) .ph-pause-circle{
+  display: none;
+}
+
+
+
